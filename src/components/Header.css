@@ -1,0 +1,38 @@
+.accordion-button {
+    background-color: #212529 !important;
+    color: whitesmoke !important;
+    text-decoration: underline;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #212529 !important;
+    color: whitesmoke !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    color: whitesmoke !important;
+    background-image: none;
+}
+
+.accordion-item .accordion-button {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.Header .title {
+    font-family: "Vivaldi", serif !important;
+    font-size: 40px;
+}
+
+.Header .navbarMargin {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.scrolled {
+    background-color: rgba(245, 245, 245, 0.9) !important;
+}
+
+.Header {
+    transition: background-color 0.9s ease-in-out;
+}
