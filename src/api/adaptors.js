@@ -1,4 +1,5 @@
 export function getNewsList(apiResponse) {
+
 	if (!apiResponse || !apiResponse.response) {
 		return [];
 	}
@@ -15,6 +16,7 @@ export function getNewsList(apiResponse) {
 }
 
 export function getNewsDetails(apiResponse) {
+
 	if (!apiResponse || !apiResponse.response) {
 		return {};
 	}

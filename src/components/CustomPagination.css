@@ -1,0 +1,12 @@
+.customPage.page-item.active .page-link {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.customPage .page-link {
+    color: #884ab2;
+}
+
+.customPage .page-link:hover {
+    color: #7045a8;
+}

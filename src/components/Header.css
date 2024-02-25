@@ -2,21 +2,24 @@
     background-color: #212529 !important;
     color: whitesmoke !important;
     text-decoration: underline;
+    border: transparent !important;
 }
 
 .accordion-button:not(.collapsed) {
     background-color: #212529 !important;
     color: whitesmoke !important;
+    border: transparent !important;
 }
 
 .accordion-button:not(.collapsed)::after {
     color: whitesmoke !important;
     background-image: none;
+    border: transparent !important;
 }
 
 .accordion-item .accordion-button {
     box-shadow: none !important;
-    border-color: transparent !important;
+    border: transparent !important;
 }
 
 .Header .title {

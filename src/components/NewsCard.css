@@ -1,6 +1,8 @@
-.NewsCard .btn-primary{
+.NewsCard .btn-primary {
     color: indianred !important;
     background-color: white !important;
     border-color: transparent !important;
-}
 
+    position:absolute;
+    top:20px;
+}

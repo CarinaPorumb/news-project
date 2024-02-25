@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -8,8 +8,12 @@ import "./Header.css";
 import {Link} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import Accordion from 'react-bootstrap/Accordion';
+import {Badge} from "react-bootstrap";
+import {FavoritesContext} from "../store/favorites/context";
 
 function Header() {
+
+    const { state } = useContext(FavoritesContext);
 
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -46,10 +50,9 @@ function Header() {
 
                         <Navbar className="justify-content-center flex-grow-1 ">
                             <Nav.Link as={Link} to="/" className="px-1">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/category/favorites" className="px-1">Favorites</Nav.Link>
+                            <Nav.Link as={Link} to="/favorites" className="px-1">Favorites  <Badge className="bg-dark">{state.news.length}</Badge></Nav.Link>
                         </Navbar>
 
-                        <Nav.Link className="px-1 m-2">All categories</Nav.Link>
                         <Navbar.Toggle className="bg-dark text-light m-1" id={`offcanvasNavbar-expand-${expand}`}>
                             <MenuIcon/> </Navbar.Toggle>
 
@@ -106,8 +109,7 @@ function Header() {
                                 <Nav.Link as={Link} to="/category/fashion"
                                           className="text-light py-2"
                                 >Fashion</Nav.Link>
-
-                                <Nav.Link as={Link} to="/category/favorites"
+                                <Nav.Link as={Link} to="/favorites"
                                           className="text-light py-2"
                                 >Favorites</Nav.Link>
                             </Offcanvas.Body>
