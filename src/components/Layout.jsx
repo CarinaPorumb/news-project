@@ -6,9 +6,9 @@ import "./Layout.css";
 function Layout(props) {
 	return (
 		<div className="Layout">
-			<Header />
-			<div>{props.children}</div>
-			<Footer />
+			<Header/>
+			<main>{props.children}</main>
+			<Footer/>
 		</div>
 	);
 }

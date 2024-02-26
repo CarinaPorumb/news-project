@@ -31,9 +31,9 @@ function Header() {
 
 
     return (
-        <header className={`Header ${isScrolled ? 'scrolled' : 'bg-transparent'}`}>
+        <header className={`Header mb-5 ${isScrolled ? 'scrolled' : 'bg-transparent'}`}>
             {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
-                <Navbar key={expand} expand={false} className={`Header d-flex fixed-top navbarMargin ${isScrolled ? 'scrolled' : 'bg-transparent'}`}>
+                <Navbar key={expand} expand={false} className={`Header d-flex fixed-top  navbarMargin ${isScrolled ? 'scrolled' : 'bg-transparent'}`}>
 
                     <Container fluid>
                         <Navbar.Brand as={Link} to="/">
@@ -49,8 +49,8 @@ function Header() {
                         </Navbar.Brand>
 
                         <Navbar className="justify-content-center flex-grow-1 ">
-                            <Nav.Link as={Link} to="/" className="px-1">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/favorites" className="px-1">Favorites  <Badge className="bg-dark">{state.news.length}</Badge></Nav.Link>
+                            <Nav.Link as={Link} to="/" className="mx-1 px-2">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/favorites" className="mx-1 px-2">Favorites  <Badge className="bg-dark">{state.news.length}</Badge></Nav.Link>
                         </Navbar>
 
                         <Navbar.Toggle className="bg-dark text-light m-1" id={`offcanvasNavbar-expand-${expand}`}>
@@ -74,8 +74,6 @@ function Header() {
                                                       className="text-light py-2">Art</Nav.Link>
                                             <Nav.Link as={Link} to="/category/books"
                                                       className="text-light py-2">Books</Nav.Link>
-                                            <Nav.Link as={Link} to="/category/museum"
-                                                      className="text-light py-2">Museums</Nav.Link>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
@@ -109,6 +107,7 @@ function Header() {
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header className="bg-dark">Fashion</Accordion.Header>
                                         <Accordion.Body className="bg-dark ">
+
                                             <Nav.Link as={Link} to="/category/fashion"
                                                       className="text-light py-2"
                                             >Fashion</Nav.Link>
@@ -121,7 +120,7 @@ function Header() {
                                         <Accordion.Header className="bg-dark">
                                                 <Nav.Link as={Link} to="/favorites"
                                                           className="text-light py-2"
-                                                >Favorites</Nav.Link>
+                                                >Favourites</Nav.Link>
                                         </Accordion.Header>
                                     </Accordion.Item>
                                 </Accordion>

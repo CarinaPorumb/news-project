@@ -6,6 +6,7 @@ import {useFetch} from "../hooks/useFetch";
 import Layout from "../components/Layout";
 import NewsCardList from "../components/NewsCardList";
 import CustomPagination from "../components/CustomPagination";
+import "./Home.css"
 
 function NewsCategory() {
 
@@ -31,10 +32,6 @@ function NewsCategory() {
 			title = "Favorites";
 			break;
 
-		case "museum":
-			title = "Museum";
-			break;
-
 		case "books":
 			title = "Books";
 			break;
@@ -54,7 +51,7 @@ function NewsCategory() {
 	return (
 		<Layout>
 			<Container className="my-5">
-				<h1 className="mb-5 pt-3">{title}</h1>
+				<h1 className=" category">{title}</h1>
 				<NewsCardList newsList={adaptedNewsList} />
 				<CustomPagination active={currentPage} baseUrl={`/category/${categoryId}`}/>
 			</Container>

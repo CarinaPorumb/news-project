@@ -1,13 +1,29 @@
 .category{
     font-weight: normal;
     color: #1A1721;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: left;
 }
 
 .textStyle{
     color: #1A1721;
+    margin-left: 10px;
+    text-align: left;
 }
 
 .linkStyle{
-    color: #9f626f;
-    font-weight: lighter;
+    color: #a63564;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container .category {
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+    .container .textStyle {
+        margin-left: 30px;
+    }
 }
