@@ -10,7 +10,6 @@ function Favorites() {
 
     const {state, dispatch} = useContext(FavoritesContext);
 
-    console.log(state)
     // function handleFavoriteRemove(id) {
     //     const actionResult = removeFromFavorites(id);
     //     dispatch(actionResult);

@@ -105,13 +105,26 @@ function Header() {
                                     </Accordion.Item>
                                 </Accordion>
 
+                                <Accordion>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header className="bg-dark">Fashion</Accordion.Header>
+                                        <Accordion.Body className="bg-dark ">
+                                            <Nav.Link as={Link} to="/category/fashion"
+                                                      className="text-light py-2"
+                                            >Fashion</Nav.Link>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
 
-                                <Nav.Link as={Link} to="/category/fashion"
-                                          className="text-light py-2"
-                                >Fashion</Nav.Link>
-                                <Nav.Link as={Link} to="/favorites"
-                                          className="text-light py-2"
-                                >Favorites</Nav.Link>
+                                <Accordion>
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header className="bg-dark">
+                                                <Nav.Link as={Link} to="/favorites"
+                                                          className="text-light py-2"
+                                                >Favorites</Nav.Link>
+                                        </Accordion.Header>
+                                    </Accordion.Item>
+                                </Accordion>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>

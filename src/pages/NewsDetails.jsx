@@ -12,6 +12,7 @@ import {dateFormatter} from "../utils/dateFormatter";
 import {getNewsDetailsEndpoint} from "../api/endpoints";
 import {FavoritesContext} from "../store/favorites/context";
 import {addToFavorites} from "../store/favorites/actions";
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 
 function NewsDetails() {
 
@@ -52,7 +53,7 @@ function NewsDetails() {
 									description
 								});
 							}}
-							>Adaugă la favorite</Button>
+							>Adaugă la favorite <FavoriteTwoToneIcon/> </Button>
 						</div>
 						<div dangerouslySetInnerHTML={{ __html: content }}></div>
 					</Col>

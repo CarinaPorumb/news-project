@@ -2,11 +2,12 @@ import React from "react";
 
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
-import { getNewsCategoriesEndpoint } from "../api/endpoints";
-import { useFetch } from "../hooks/useFetch";
-import { getNewsList } from "../api/adaptors";
+import {getNewsCategoriesEndpoint} from "../api/endpoints";
+import {useFetch} from "../hooks/useFetch";
+import {getNewsList} from "../api/adaptors";
 import NewsCardList from "../components/NewsCardList";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import "./Home.css"
 
 function Home() {
 	const technologyNewsEndpoint = getNewsCategoriesEndpoint("technology", 1, 3);
@@ -34,11 +35,11 @@ function Home() {
 		<Layout>
 			<section className="fashion my-5">
 				<Container>
-					<h1 className="my-5 pt-5 mx-2">Fashion</h1>
+					<h1 className="my-5 pt-5 mx-2 category">Fashion</h1>
 					<NewsCardList newsList={adaptedFashionData} />
-					<p>
-						Vezi toate știrile legate de arta în secțiunea{" "}
-						<Link to="/category/fashion" className="text-secondary">Fashion</Link>
+					<p className="textStyle">
+                        See all news related to fashion in the Fashion section{" "}
+						<Link to="/category/fashion" className="linkStyle">Fashion</Link>
 						.
 					</p>
 				</Container>
@@ -46,13 +47,11 @@ function Home() {
 
 			<section className="art my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Art</h1>
+					<h1 className="my-5 pt-5 mx-2 category">Art</h1>
 					<NewsCardList newsList={adaptedArtData} />
-					<p>
-						Vezi toate știrile legate de arta în secțiunea{" "}
-						<Link to="/category/art" className="text-secondary">
-							Art
-						</Link>
+					<p className="textStyle">
+                        See all news related to art in the Art section{" "}
+						<Link to="/category/art" className="linkStyle">Art</Link>
 						.
 					</p>
 				</Container>
@@ -60,11 +59,11 @@ function Home() {
 
 			<section className="books my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Carti</h1>
+					<h1 className="my-5 pt-5 mx-2 category">Books</h1>
 					<NewsCardList newsList={adaptedBooksData} />
-					<p>
-						Vezi toate știrile legate de carti în secțiunea{" "}
-						<Link to="/category/books" className="text-secondary">Carti</Link>
+					<p className="textStyle">
+                        See all news related to books in the Books section{" "}
+						<Link to="/category/books" className="linkStyle">Books</Link>
 						.
 					</p>
 				</Container>
@@ -72,11 +71,11 @@ function Home() {
 
 			<section className="museum my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Muzee</h1>
+					<h1 className="my-5 pt-5 mx-2 category">Museum</h1>
 					<NewsCardList newsList={adaptedMuseumsData} />
-					<p>
-						Vezi toate știrile legate de muzee în secțiunea{" "}
-						<Link to="/category/museum" className="text-secondary">Muzee</Link>
+					<p className="textStyle">
+                        See all news related to museums in the Museum section{" "}
+						<Link to="/category/museum" className="linkStyle">Museum</Link>
 						.
 					</p>
 				</Container>
@@ -84,11 +83,11 @@ function Home() {
 
 			<section className="tech my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Tech</h1>
+					<h1 className="my-5 pt-5 mx-2 category">Tech</h1>
 					<NewsCardList newsList={adaptedTechnologyData} />
-					<p>
-						Vezi toate știrile legate de tehnologie în secțiunea{" "}
-						<Link to="/category/technology" className="text-secondary">Tech</Link>
+					<p className="textStyle">
+                        See all news related to tech in the Tech section{" "}
+						<Link to="/category/technology" className="linkStyle">Tech</Link>
 						.
 					</p>
 				</Container>
@@ -96,11 +95,11 @@ function Home() {
 
 			<section className="football my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Fotbal</h1>
-					<NewsCardList newsList={adaptedFootballData} />
-					<p>
-						Vezi toate știrile legate de tehnologie în secțiunea{" "}
-						<Link to="/category/football" className="text-secondary">Fotbal</Link>
+					<h1 className="my-5 pt-5 mx-2 category">Football</h1>
+					<NewsCardList newsList={adaptedFootballData}/>
+					<p className="textStyle">
+                        See all news related to football in the Football section{" "}
+						<Link to="/category/football" className="linkStyle">Football</Link>
 						.
 					</p>
 				</Container>
@@ -108,13 +107,9 @@ function Home() {
 
 			<section className="favorites my-5">
 				<Container>
-					<h1 className="mb-5 pt-3">Favorite</h1>
-					<p>Vrei să îți salvezi știrile favorite pentru a le reciti mai încolo?</p>
-					<p>În cadrul fiecărei știri găsești un buton prin care poți adăuga știrea la favorite.</p>
-					<p className="pb-3">
-						Vizitează secțiunea{" "}
-						<Link to="/favorites" className="text-secondary">Favorite</Link>{" "}
-						pentru a vedea știrile adăugate.
+					<h1 className="my-5 pt-5 mx-2 category">Favorites</h1>
+					<p className="pb-3 textStyle">
+						Visit the <Link to="/favorites" className="linkStyle">Favorites</Link> section to see the news you've added.
 					</p>
 				</Container>
 			</section>
