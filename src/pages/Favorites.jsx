@@ -10,10 +10,12 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DeleteIcon from '@mui/icons-material/Delete';
+import {Link} from "react-router-dom";
 
 function Favorites() {
 
     const {state, dispatch} = useContext(FavoritesContext);
+
 
     function handleFavoriteRemove(id) {
         const actionResult = removeFromFavorites(id);
@@ -37,17 +39,22 @@ function Favorites() {
                             {state.news.map((news) => {
                                 return (
                                     <Col xs={12} md={6} lg={3} key={news.id}>
+
                                         <Card
                                             className="NewsCard h-100 d-flex flex-column justify-content-between align-items-center rounded-2 shadow-sm">
-                                            <Card.Img variant="top" src={news.thumbnail}/>
-                                            <Card.Body className="title">
-                                                <Card.Title className="text-center ">{news.title}</Card.Title>
-                                                <Card.Text>{news.description}</Card.Text>
-                                            </Card.Body>
+                                            <Link to={`/news/${encodeURIComponent(news.id)}`}>
+                                                <Card.Img variant="top" src={news.thumbnail}/>
+                                                <Card.Body className="title">
+                                                    <Card.Title className="text-center ">{news.title}</Card.Title>
+                                                    <Card.Text>{news.description}</Card.Text>
+                                                </Card.Body>
+                                            </Link>
                                             <Button onClick={() => {
                                                 handleFavoriteRemove(news.id)
-                                            }}><DeleteIcon className="favButton"/></Button>
+                                            }}><DeleteIcon className="favButton"/>
+                                            </Button>
                                         </Card>
+
                                     </Col>
                                 )
                             })}

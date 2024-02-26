@@ -106,8 +106,7 @@ function Header() {
                                 <Accordion>
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header className="bg-dark">Fashion</Accordion.Header>
-                                        <Accordion.Body className="bg-dark ">
-
+                                        <Accordion.Body className="bg-dark">
                                             <Nav.Link as={Link} to="/category/fashion"
                                                       className="text-light py-2"
                                             >Fashion</Nav.Link>

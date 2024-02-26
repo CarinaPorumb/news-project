@@ -10,6 +10,7 @@ import {Link} from "react-router-dom";
 import "./Home.css"
 
 function Home() {
+
 	const technologyNewsEndpoint = getNewsCategoriesEndpoint("technology", 1, 3);
 	const footballNewsEndpoint = getNewsCategoriesEndpoint("football", 1, 3);
 	const booksNewsEndpoint = getNewsCategoriesEndpoint("books", 1, 3);
@@ -19,16 +20,16 @@ function Home() {
 	let technologyData = useFetch(technologyNewsEndpoint);
 	let footballData = useFetch(footballNewsEndpoint);
 	let booksData = useFetch(booksNewsEndpoint);
-
 	let artData = useFetch(artNewsEndpoint);
 	let fashionData = useFetch(fashionNewsEndpoint);
 
 	const adaptedTechnologyData = getNewsList(technologyData);
 	const adaptedFootballData = getNewsList(footballData);
 	const adaptedBooksData = getNewsList(booksData);
-
 	const adaptedArtData = getNewsList(artData);
 	const adaptedFashionData = getNewsList(fashionData);
+
+	console.log(adaptedFashionData)
 
 	return (
 		<Layout>
