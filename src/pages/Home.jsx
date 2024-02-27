@@ -11,28 +11,21 @@ import "./Home.css"
 
 function Home() {
 
-    //Art
     const booksNewsEndpoint = getNewsCategoriesEndpoint("books", 1, 3);
     const filmNewsEndpoint = getNewsCategoriesEndpoint("film", 1, 3);
     const musicNewsEndpoint = getNewsCategoriesEndpoint("music", 1, 3);
-    //Lifestyles
     const travelNewsEndpoint = getNewsCategoriesEndpoint("travel", 1, 3);
     const wellnessNewsEndpoint = getNewsCategoriesEndpoint("wellness", 1, 3);
     const fashionNewsEndpoint = getNewsCategoriesEndpoint("fashion", 1, 3);
-	//Sus & Env
 	const sustainabilityNewsEndpoint = getNewsCategoriesEndpoint("sustainability", 1, 3);
 	const environmentNewsEndpoint = getNewsCategoriesEndpoint("environment", 1, 3);
-	//Science
 	const technologyNewsEndpoint = getNewsCategoriesEndpoint("technology", 1, 3);
 	const scienceNewsEndpoint = getNewsCategoriesEndpoint("science", 1, 3);
-    //Sport
     const footballNewsEndpoint = getNewsCategoriesEndpoint("football", 1, 3);
     const sportsNewsEndpoint = getNewsCategoriesEndpoint("sport", 1, 3);
-	//World
 	const politicsNewsEndpoint = getNewsCategoriesEndpoint("politics", 1, 3);
 	const societyNewsEndpoint = getNewsCategoriesEndpoint("society", 1, 3);
 	const educationNewsEndpoint = getNewsCategoriesEndpoint("education", 1, 3);
-    //-------------------------------------------------------------------------------------
 
 
     let booksData = useFetch(booksNewsEndpoint);
