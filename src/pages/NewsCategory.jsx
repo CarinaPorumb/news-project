@@ -20,30 +20,54 @@ function NewsCategory() {
 
 	let title = "";
 	switch (categoryId) {
-		case "technology":
-			title = "Tech";
-			break;
-
-		case "football":
-			title = "Fotbal";
-			break;
-
-		case "favorites":
-			title = "Favorites";
-			break;
-
 		case "books":
 			title = "Books";
 			break;
-
-		case "art":
-			title = "Art";
+		case "film":
+			title = "Film";
 			break;
-
+		case "music":
+			title = "Music";
+			break;
+		case "travel":
+			title = "Travel";
+			break;
+		case "wellness":
+			title = "Wellness";
+			break;
 		case "fashion":
 			title = "Fashion";
 			break;
-
+		case "environment":
+			title = "Environment";
+			break;
+		case "sustainability":
+			title = "Sustainability";
+			break;
+		case "technology":
+			title = "Technology";
+			break;
+		case "science":
+			title = "Science";
+			break;
+		case "education":
+			title = "Education";
+			break;
+		case "politics":
+			title = "Politics";
+			break;
+		case "society":
+			title = "Society";
+			break;
+		case "football":
+			title = "Football";
+			break;
+		case "sport":
+			title = "More Sports";
+			break;
+		case "favorites":
+			title = "Favorites";
+			break;
 		default:
 			break;
 	}
